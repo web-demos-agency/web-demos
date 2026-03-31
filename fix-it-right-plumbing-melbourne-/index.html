@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix It Right Plumbing Melbourne | Professional Plumbing Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0055FF',
+                        secondary: '#00D1FF',
+                        dark: '#1A1A2E'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif']
+                    },
+                    borderRadius: {
+                        '4xl': '2rem'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/hamo"></script>
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-gray-100 text-dark">
+    <header class="fixed w-full top-0 bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="font-display text-2xl font-bold text-primary">
+                Fix It Right
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="tel:0412345678" class="hidden md:flex items-center gap-2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    04 1234 5678
+                </a>
+                <a href="https://wa.me/61412345678" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full transition-all">
+                    Get Help Now
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="min-h-screen relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 -z-10"></div>
+            <div class="container mx-auto px-4 py-20">
+                <div class="max-w-3xl">
+                    <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
+                        Your Trusted Local Plumber in Melbourne
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8">
+                        24/7 Emergency Service • Licensed & Insured • 100% Satisfaction Guaranteed
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/61412345678" class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-medium transition-all flex items-center gap-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <!-- WhatsApp icon SVG code here -->
+                            </svg>
+                            Chat on WhatsApp
+                        </a>
+                        <a href="tel:0412345678" class="border border-primary text-primary hover:bg-primary/5 px-8 py-4 rounded-full text-lg font-medium transition-all">
+                            Call Us Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-white" id="services">
+            <div class="container mx-auto px-4">
+                <h2 class="font-display text-4xl font-bold text-center mb-16">Our Services</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service cards here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- More sections following the same pattern -->
+
+    </main>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <!-- Footer content -->
+        </div>
+    </footer>
+
+    <script>
+        // Lenis smooth scroll
+        const lenis = new Lenis({
+            lerp: 0.1,
+            smoothWheel: true
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
