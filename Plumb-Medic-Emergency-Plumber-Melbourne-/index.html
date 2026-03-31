@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumb Medic - Emergency Plumber Melbourne | 24/7 Service</title>
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/@studio-freight/lenis"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0055FF',
+                        secondary: '#00D1FF',
+                    },
+                    fontFamily: {
+                        sans: ['Satoshi', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .magnetic { transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=2000"
+                 srcset="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1000 1000w,
+                         https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=2000 2000w"
+                 alt="Professional plumbing service"
+                 class="w-full h-full object-cover"
+                 loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Your Trusted Emergency Plumber in Melbourne</h1>
+                <p class="text-xl text-gray-200 mb-8">Available 24/7 for all your plumbing emergencies. Professional, reliable, and fast response times.</p>
+                
+                <div class="flex gap-4 flex-wrap">
+                    <a href="https://wa.me/61412345678" class="magnetic inline-flex items-center px-8 py-4 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                        <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm.031 18c-1.312 0-2.531-.366-3.594-1l-4.031 1.031 1.062-3.813C4.78 13.156 4.312 11.656 4.312 10c0-4.438 3.625-8.031 8.063-8.031 4.437 0 8.031 3.594 8.031 8.031 0 4.438-3.594 8-8.031 8z"/>
+                        </svg>
+                        Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white" id="services">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Our Services</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-xl shadow-lg magnetic">
+                    <svg class="w-12 h-12 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-4">Emergency Repairs</h3>
+                    <p class="text-gray-600">24/7 emergency plumbing services for blocked drains, burst pipes, and more.</p>
+                </div>
+                <!-- More service cards... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional sections following the same pattern... -->
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">Plumb Medic</h3>
+                    <p class="text-gray-400">Your trusted emergency plumber in Melbourne, available 24/7.</p>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-gray-400">Phone: 0412 345 678</p>
+                    <p class="text-gray-400">Email: info@plumbmedic.com.au</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        });
+    </script>
+</body>
+</html>
