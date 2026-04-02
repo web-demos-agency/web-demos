@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Tavener Plumbing Services | Holland Park West</title>
+    <meta name="description" content="Premium plumbing repairs and services in Holland Park West, QLD. Local tradies you can trust. Call +61 7 3394 4918 today.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                            950: '#172554',
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #020617; /* Slate 950 */
+            color: #f8fafc;
+        }
+        
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #60a5fa, #a78bfa);
+        }
+
+        .cursor {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            mix-blend-mode: difference;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+        }
+
+        .cursor-active {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Hide default cursor on desktop */
+        @media (min-width: 768px) {
+            body { cursor: none; }
+            a, button { cursor: none; }
+        }
+    </style>
+</head>
+<body class="antialiased font-sans selection:bg-brand-500 selection:text-white">
+
+    <!-- Custom Cursor -->
+    <div class="cursor hidden md:block" id="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 transform translate-y-0" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center shadow-lg shadow-brand-500/30">
+                        <i data-lucide="droplet" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-tight">Peter Tavener <span class="text-brand-400">Plumbing</span></span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition-colors magnetic-link">Services</a>
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors magnetic-link">About</a>
+                    <a href="#reviews" class="text-sm font-medium text-slate-300 hover:text-white transition-colors magnetic-link">Reviews</a>
+                    <a href="tel:+61733944918" class="group relative px-6 py-2.5 font-semibold text-white rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all duration-300 overflow-hidden magnetic-link">
+                        <span class="relative z-10 flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            +61 7 3394 4918
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="hero">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/90 to-slate-950 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1585819231365-5c1ea5130fa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Professional Plumber" class="w-full h-full object-cover parallax-bg" loading="lazy">
+        </div>
+        
+        <div class="absolute top-1/4 -left-64 w-96 h-96 bg-brand-500/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 -right-64 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px]"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 text-brand-400 text-sm font-medium mb-8 gsap-fade-up">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                Serving Holland Park West & Surrounds
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight mb-6 gsap-fade-up">
+                Master Tradies.<br>
+                <span class="text-gradient">Spot On Solutions.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed gsap-fade-up">
+                Top-tier domestic and commercial plumbing repairs. From leaky taps to complete system overhauls, we deliver the quality workmanship Aussies expect. 
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center gsap-fade-up w-full sm:w-auto">
+                <a href="https://wa.me/61733944918" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-full bg-green-500 hover:bg-green-400 text-slate-950 font-bold text-lg transition-all duration-300 shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:shadow-[0_0_50px_rgba(34,197,94,0.5)] flex items-center justify-center gap-2 magnetic-link">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    WhatsApp Us
+                </a>
+                <a href="tel:+61733944918" class="w-full sm:w-auto px-8 py-4 rounded-full glass hover:bg-white/10 text-white font-bold text-lg transition-all duration-300 border border-white/20 flex items-center justify-center gap-2 magnetic-link">
+                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                    Call +61 7 3394 4918
+                </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="mt-20 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 gsap-fade-up">
+                <div class="flex items-center gap-2">
+                    <div class="flex -space-x-2">
+                        <img class="w-8 h-8 rounded-full border border-slate-900" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Customer">
+                        <img class="w-8 h-8 rounded-full border border-slate-900" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="Customer">
+                        <div class="w-8 h-8 rounded-full border border-slate-900 bg-slate-800 flex items-center justify-center text-xs font-medium text-white">+80</div>
+                    </div>
+                    <div class="text-left ml-2">
+                        <div class="flex text-yellow-400 text-sm">
+                            ★★★★★
+                        </div>
+                        <div class="text-xs font-medium text-slate-300">4.9/5 on Google</div>
+                    </div>
+                </div>
+                <div class="h-8 w-px bg-white/20 hidden md:block"></div>
+                <div class="flex items-center gap-2 text-sm font-medium">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-400"></i>
+                    Fully Licensed
+                </div>
+                <div class="h-8 w-px bg-white/20 hidden md:block"></div>
+                <div class="flex items-center gap-2 text-sm font-medium">
+                    <i data-lucide="accessibility" class="w-5 h-5 text-brand-400"></i>
+                    Accessible Services
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">Expertised <span class="text-brand-400">Repair Services</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">We handle everything from minor repairs to major installations with the precision and care your property deserves.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-500 group border border-white/5 hover:border-brand-500/30">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="wrench" class="w-7 h-7 text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">General Repairs</h3>
+                    <p class="text-slate-400 leading-relaxed">Leaky taps, running toilets, and minor pipe damage sorted out quickly by our local tradesmen.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-500 group border border-white/5 hover:border-brand-500/30">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="waves" class="w-7 h-7 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Blocked Drains</h3>
+                    <p class="text-slate-400 leading-relaxed">Advanced clearing technology to unblock drains thoroughly, preventing future disruptions in your home or centre.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-500 group border border-white/5 hover:border-brand-500/30">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="thermometer-sun" class="w-7 h-7 text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Hot Water Systems</h3>
+                    <p class="text-slate-400 leading-relaxed">Installation, repair, and maintenance for gas, electric, and solar hot water systems to keep your showers warm.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-500 group border border-white/5 hover:border-brand-500/30">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="search" class="w-7 h-7 text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Leak Detection</h3>
+                    <p class="text-slate-400 leading-relaxed">Pinpoint hidden leaks with non-invasive equipment, saving your walls and floors from unnecessary damage.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-500 group border border-white/5 hover:border-brand-500/30">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="flame" class="w-7 h-7 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Gas Fitting</h3>
+                    <p class="text-slate-400 leading-relaxed">Certified and safe gas line installations and appliance connections compliant with all Australian standards.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-500 group border border-white/5 hover:border-brand-500/30">
+                    <div class="w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="alert-triangle" class="w-7 h-7 text-red-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Emergency Callouts</h3>
+                    <p class="text-slate-400 leading-relaxed">Burst pipes or overflowing toilets? We respond rapidly to secure your property and fix the issue fast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / About -->
+    <section id="about" class="py-32 bg-slate-900 border-y border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">Local. <span class="text-brand-400">Reliable.</span> Professional.</h2>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        At Peter Tavener Plumbing Services Pty Ltd, we pride ourselves on delivering top-tier workmanship across Holland Park West and surrounding Queensland suburbs. We are committed to straightforward communication, punctuality, and leaving your property spotlessly clean.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-brand-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg font-display">Top Rated by Locals</h4>
+                                <p class="text-slate-400 mt-1">Maintaining a 4.9/5 rating from over 86 authentic reviews. Our reputation is built on trust and hard yakka.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-brand-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg font-display">Accessible Facilities Conscious</h4>
+                                <p class="text-slate-400 mt-1">We specialise in inclusive plumbing setups, ensuring wheelchair-accessible toilets and seating areas are installed precisely to code.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-brand-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg font-display">Upfront & Transparent</h4>
+                                <p class="text-slate-400 mt-1">No hidden fees or surprise charges. We explain the problem and the solution clearly before any spanners are turned.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-brand-500 to-purple-500 opacity-20 blur-2xl rounded-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1542013936693-884638332954?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Plumbing Work" class="relative rounded-3xl border border-white/10 shadow-2xl z-10 parallax-img" loading="lazy">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-8 -left-8 glass p-6 rounded-2xl z-20 border border-white/10 shadow-xl hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-500 flex items-center justify-center">
+                                <i data-lucide="star" class="w-6 h-6 text-white text-yellow-300 fill-yellow-300"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold font-display">86+</div>
+                                <div class="text-sm text-slate-300">5-Star Reviews</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Contact Section -->
+    <section class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 glass rounded-[3rem] overflow-hidden border border-white/5">
+                
+                <!-- Contact Info -->
+                <div class="p-10 md:p-16 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Ready to fix it? <br><span class="text-brand-400">Get in touch.</span></h2>
+                    <p class="text-slate-400 mb-10 text-lg">Whether it's a blocked drain or a leaky tap, give us a bell and we'll have it sorted in record time.</p>
+                    
+                    <div class="space-y-6 mb-12">
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-500/20 transition-colors">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-400">Our Location</p>
+                                <p class="font-medium text-white text-lg">9 Hamel Rd, Holland Park West QLD 4121</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-500/20 transition-colors">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-400">Give us a call</p>
+                                <a href="tel:+61733944918" class="font-medium text-white text-lg hover:text-brand-400 transition-colors">+61 7 3394 4918</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/61733944918" target="_blank" class="w-full px-6 py-4 rounded-full bg-[#25D366] hover:bg-[#20b858] text-white font-bold transition-all duration-300 shadow-lg shadow-[#25D366]/20 flex items-center justify-center gap-2 magnetic-link">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps iframe -->
+                <div class="h-[400px] lg:h-auto min-h-[500px] relative">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Peter+Tavener+Plumbing+Services+Pty+Ltd,+9+Hamel+Rd,+Holland+Park+West+QLD+4121,+Australia&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        class="absolute inset-0 w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700 opacity-80 hover:opacity-100" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-slate-950 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center">
+                        <i data-lucide="droplet" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <span class="font-display font-medium text-lg">Peter Tavener <span class="text-slate-400">Plumbing</span></span>
+                </div>
+                
+                <div class="text-slate-500 text-sm text-center md:text-right">
+                    &copy; <span id="year"></span> Peter Tavener Plumbing Services Pty Ltd. All rights reserved.<br>
+                    ABN / Licences available on request. Holland Park West, QLD.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth Scroll (Lenis)
+        const lenis = new Lenis({
+            lerp: 0.1,
+            smoothWheel: true
+        });
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+
+        // Custom Cursor
+        const cursor = document.getElementById('custom-cursor');
+        const magneticLinks = document.querySelectorAll('.magnetic-link, button, a');
+
+        document.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.1,
+                ease: "power2.out"
+            });
+        });
+
+        magneticLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => cursor.classList.add('cursor-active'));
+            link.addEventListener('mouseleave', () => cursor.classList.remove('cursor-active'));
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Navbar blur on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass', 'py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('glass', 'py-2');
+                nav.classList.add('py-4');
+            }
+        });
+
+        // Fade up animations
+        gsap.utils.toArray('.gsap-fade-up').forEach(element => {
+            gsap.fromTo(element, 
+                { y: 50, opacity: 0 },
+                {
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 85%",
+                    },
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power3.out"
+                }
+            );
+        });
+
+        // Parallax image
+        gsap.to(".parallax-img", {
+            yPercent: 20,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top bottom", 
+                end: "bottom top",
+                scrub: true
+            } 
+        });
+
+    </script>
+</body>
+</html>

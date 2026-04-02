@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbmasters of Atlanta | Elite Plumbing Services in Acworth & Atlanta</title>
+    <meta name="description" content="Top-rated plumbing experts in Acworth and Atlanta, GA. Specializing in water heater replacement, emergency repairs, and whole-home repiping. 4.8 stars with 100+ reviews.">
+    
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Script -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Plumbmasters of Atlanta",
+      "image": "file:///C:/Users/User/.gemini/antigravity/brain/0c13c4a6-e3e9-43f9-a8f8-320c9bcdaade/plumbing_hero_atlanta_1775105573803.png",
+      "url": "https://plumbmastersatl.com",
+      "telephone": "+16784306639",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4401 Baker Grove Rd NW #330",
+        "addressLocality": "Acworth",
+        "addressRegion": "GA",
+        "postalCode": "30101",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.063735,
+        "longitude": -84.650847
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --brand-primary: #2563eb;
+            --brand-secondary: #f59e0b;
+            --bg-dark: #020617;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: #f1f5f9;
+        }
+
+        h1, h2, h3, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Bento Grid */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(280px, auto);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .bento-grid { grid-template-columns: 1fr; }
+        }
+
+        .bento-large { grid-column: span 2; grid-row: span 2; }
+        .bento-wide { grid-column: span 2; }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between glass rounded-3xl px-8 py-4 border border-white/5 shadow-2xl">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-600/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets"><path d="M7 16.3c2.2 0 4-1.8 4-4 0-3.3-4-8-4-8s-4 4.7-4 8c0 2.2 1.8 4 4 4Z"></path><path d="M17 14.5c1.4 0 2.5-1.1 2.5-2.5 0-2.1-2.5-5.1-2.5-5.1s-2.5 3-2.5 5.1c0 1.4 1.1 2.5 2.5 2.5Z"></path></svg>
+                </div>
+                <div>
+                    <span class="block font-black text-xl tracking-tight leading-none uppercase">Plumbmasters</span>
+                    <span class="block text-[10px] font-bold text-blue-400 uppercase tracking-[0.3em] mt-1">Of Atlanta</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="#services" class="text-sm font-semibold hover:text-blue-400 transition-colors uppercase tracking-widest">Services</a>
+                <a href="#reviews" class="text-sm font-semibold hover:text-blue-400 transition-colors uppercase tracking-widest">Success Stories</a>
+                <a href="#contact" class="text-sm font-semibold hover:text-blue-400 transition-colors uppercase tracking-widest">Contact</a>
+            </div>
+
+            <a href="tel:+16784306639" class="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-2xl font-bold text-sm transition-all transform hover:scale-105 shadow-xl shadow-blue-600/25 flex items-center gap-2 uppercase tracking-wider">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Call (678) 430-6639
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent z-10"></div>
+            <img src="file:///C:/Users/User/.gemini/antigravity/brain/0c13c4a6-e3e9-43f9-a8f8-320c9bcdaade/plumbing_hero_atlanta_1775105573803.png" alt="Plumbing Specialist Atlanta" class="w-full h-full object-cover">
+        </div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-6 w-full py-20">
+            <div class="max-w-3xl reveal">
+                <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass mb-8 border border-white/10 shadow-xl">
+                    <span class="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <span class="text-xs font-black uppercase tracking-[0.2em] text-blue-400">Trusted in Acworth & All Atlanta</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter mb-8">
+                    Atlanta's Pure <br>
+                    <span class="text-gradient">Plumbing Power.</span>
+                </h1>
+                
+                <p class="text-xl text-slate-400 leading-relaxed max-w-xl mb-12 font-medium">
+                    From emergency leak suppression to high-efficiency water heater installs. Andrew and the team deliver master-level craftsmanship when others say it's impossible.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <a href="tel:+16784306639" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 rounded-2xl font-black text-xl transition-all shadow-2xl shadow-blue-600/30 flex items-center justify-center gap-4 group">
+                        Fix My Pipes Now
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-2"><path d="m9 18 6-6-6-6"></path></svg>
+                    </a>
+                    
+                    <div class="flex items-center gap-6 px-8 py-5 rounded-2xl glass border border-white/5">
+                        <div class="flex -space-x-3">
+                            <div class="w-12 h-12 rounded-full border-4 border-slate-950 bg-blue-600 flex items-center justify-center text-sm font-black text-white">4.8</div>
+                        </div>
+                        <div>
+                            <div class="flex text-amber-500 mb-1 text-base">★★★★★</div>
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">109+ Master Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Bento -->
+    <section id="services" class="py-32 bg-slate-950 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-20 reveal">
+                <h2 class="text-4xl md:text-7xl font-black mb-6 outfit leading-none tracking-tighter">Full Service Domination.</h2>
+                <p class="text-slate-500 text-xl">We don't just clear clogs. We engineer long-term durability for your home.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Large Card: Water Heaters -->
+                <div class="bento-large glass p-12 rounded-[3.5rem] hover:bg-slate-900/50 transition-all border border-white/5 group reveal flex flex-col justify-between relative overflow-hidden">
+                    <div class="z-10">
+                        <div class="w-20 h-20 bg-blue-600/10 rounded-3xl flex items-center justify-center text-blue-500 mb-10 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                        </div>
+                        <h3 class="text-4xl font-extrabold mb-6 outfit leading-none">Gas Hot Water <br>Heater Specialist</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed max-w-sm mb-8">Fastest turnaround in GA. We replace failing units with high-efficiency systems in hours, not days.</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 font-bold text-slate-300">
+                                <span class="text-blue-500 text-2xl">✓</span> Same-Day Installation
+                            </li>
+                            <li class="flex items-center gap-3 font-bold text-slate-300">
+                                <span class="text-blue-500 text-2xl">✓</span> High-Efficiency Tech
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="file:///C:/Users/User/.gemini/antigravity/brain/0c13c4a6-e3e9-43f9-a8f8-320c9bcdaade/gas_water_heater_install_1775105600481.png" class="absolute right-0 bottom-0 w-2/3 h-2/3 object-cover opacity-10 group-hover:opacity-30 transition-opacity" alt="">
+                </div>
+
+                <!-- Emergency Card -->
+                <div class="glass p-10 rounded-[2.5rem] hover:bg-slate-900/50 transition-all border border-white/5 group reveal flex flex-col justify-between overflow-hidden relative">
+                    <div class="z-10">
+                        <div class="w-16 h-16 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-500 mb-8 group-hover:rotate-12 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14.75V3c0-.55.45-1 1-1h10l5 5v14c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1v-4.25"></path><path d="M16 2v5h5"></path><path d="M8 10h5"></path><path d="M8 14h5"></path><path d="M8 18h5"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-black mb-4 outfit">Emergency <br>Leak Response</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Andrew responds promptly late at night when the pressure is on.</p>
+                    </div>
+                    <img src="file:///C:/Users/User/.gemini/antigravity/brain/0c13c4a6-e3e9-43f9-a8f8-320c9bcdaade/emergency_plumbing_night_1775105619826.png" class="absolute inset-0 w-full h-full object-cover opacity-5 group-hover:opacity-10 transition-opacity" alt="">
+                </div>
+
+                <!-- Repiping -->
+                <div class="glass p-10 rounded-[2.5rem] hover:bg-slate-900/50 transition-all border border-white/5 group reveal flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-8 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-construction"><rect x="2" y="6" width="20" height="8" rx="1"></rect><path d="M17 14v7"></path><path d="M7 14v7"></path><path d="M17 3v3"></path><path d="M7 3v3"></path><path d="M10 14 2.3 6.3"></path><path d="M14 14 21.7 6.3"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-black mb-4 outfit">Whole-Home <br>Repiping</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Elite PEX and Copper upgrades for aging Atlanta properties.</p>
+                    </div>
+                    <button class="text-blue-500 font-black text-xs uppercase tracking-[0.3em] mt-8 flex items-center gap-2">Learn More <span>→</span></button>
+                </div>
+
+                <!-- Commercial -->
+                <div class="bento-wide glass p-10 rounded-[3rem] border border-white/5 flex flex-col md:flex-row items-center justify-between gap-10 reveal">
+                    <div class="max-w-md">
+                        <h3 class="text-3xl font-black mb-4 outfit tracking-tight">Acworth Commercial?</h3>
+                        <p class="text-slate-500 font-medium leading-relaxed">We handle multi-unit developments and commercial plumbing infrastructure with enterprise precision.</p>
+                    </div>
+                    <a href="tel:+16784306639" class="bg-white text-slate-950 px-10 py-5 rounded-2xl font-black text-lg transition-all hover:scale-105 shadow-2xl">Get Enterprise Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section (Meet Andrew) -->
+    <section id="reviews" class="py-32 bg-slate-900 px-6 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="flex-1 reveal">
+                    <h2 class="text-5xl md:text-8xl font-black mb-10 outfit leading-[0.9] tracking-tighter">Meet The <br><span class="text-gradient">Legendary Master.</span></h2>
+                    <div class="glass p-12 rounded-[3.5rem] border border-blue-500/20 relative">
+                        <div class="text-7xl text-blue-500/20 absolute -top-10 -left-5">"</div>
+                        <p class="text-2xl italic text-slate-200 leading-relaxed outfit font-medium mb-10">
+                            "Andrew at Plumbmasters of Atlanta did an outstanding job replacing our gas hot water heater. He provided same-day service, was extremely professional, and completed the job at a fair price."
+                        </p>
+                        <div class="flex items-center gap-5">
+                            <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl">S</div>
+                            <div>
+                                <span class="block font-black text-xl outfit uppercase tracking-widest leading-none">Sean Anderson</span>
+                                <span class="block text-sm font-bold text-blue-500 uppercase tracking-widest mt-2">Verified Homeowner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 reveal delay-200">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="glass p-8 rounded-[2.5rem] border border-white/5">
+                            <p class="text-4xl font-black text-blue-400 mb-2 outfit">109</p>
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Google Successes</p>
+                        </div>
+                        <div class="glass p-8 rounded-[2.5rem] border border-white/5">
+                            <p class="text-4xl font-black text-white mb-2 outfit">Same</p>
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Day Response</p>
+                        </div>
+                        <div class="bento-wide glass p-10 rounded-[2.5rem] border border-white/5">
+                            <p class="text-slate-300 font-medium italic">"Andrew responded promptly late at night... thoroughly assessed and swiftly provided the repair."</p>
+                            <p class="text-xs font-black text-blue-500 uppercase tracking-widest mt-4">— SAMANTHA NAVARRO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-32 bg-slate-950 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-16 outfit text-center tracking-tight">Pure Precision FAQ.</h2>
+            <div class="space-y-4">
+                <details class="glass group rounded-2xl overflow-hidden border border-white/5 transition-all outline-none">
+                    <summary class="p-8 font-black text-xl outfit cursor-pointer list-none flex justify-between items-center group-open:bg-blue-600/10">
+                        Is Andrew available for emergency calls?
+                        <span class="text-blue-500 transition-transform group-open:rotate-180">↓</span>
+                    </summary>
+                    <div class="p-8 pt-0 text-slate-400 leading-relaxed font-medium">
+                        Yes, Andrew and the Plumbmasters team specialize in late-night and emergency plumbing responses across the Atlanta metro area.
+                    </div>
+                </details>
+
+                <details class="glass group rounded-2xl overflow-hidden border border-white/5 transition-all outline-none">
+                    <summary class="p-8 font-black text-xl outfit cursor-pointer list-none flex justify-between items-center group-open:bg-blue-600/10">
+                        Do you offer upfront estimates?
+                        <span class="text-blue-500 transition-transform group-open:rotate-180">↓</span>
+                    </summary>
+                    <div class="p-8 pt-0 text-slate-400 leading-relaxed font-medium">
+                        Always. We believe in "Pure Plumbing Power" with zero hidden fees. Detailed on-site or online estimates are provided before any work starts.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-20 bg-slate-950 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-2xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.8 4-4 0-3.3-4-8-4-8s-4 4.7-4 8c0 2.2 1.8 4 4 4Z"></path><path d="M17 14.5c1.4 0 2.5-1.1 2.5-2.5 0-2.1-2.5-5.1-2.5-5.1s-2.5 3-2.5 5.1c0 1.4 1.1 2.5 2.5 2.5Z"></path></svg>
+                </div>
+                <div>
+                    <span class="font-black text-slate-500 outfit uppercase tracking-widest text-lg">Plumbmasters of Atlanta</span>
+                    <p class="text-xs font-bold text-slate-700 tracking-widest mt-1">Acworth, GA 30101 | (678) 430-6639</p>
+                </div>
+            </div>
+            
+            <p class="text-xs font-bold text-slate-700 uppercase tracking-[0.2em]">&copy; 2026. Built by AI Site Agency v2.0</p>
+            
+            <div class="flex gap-8">
+                <a href="tel:+16784306639" class="text-sm font-black text-blue-500 uppercase tracking-widest hover:text-white transition-colors">Call Now</a>
+                <a href="#" class="text-sm font-black text-slate-700 uppercase tracking-widest hover:text-white transition-colors">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

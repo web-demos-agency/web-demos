@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVAC Guyz & Plumbing Inc | Expert Heating, Cooling & Plumbing in Atlanta</title>
+    <meta name="description" content="Top-rated HVAC and plumbing experts in Atlanta, GA. Specializing in AC repair, furnace installation, water heaters, and EV charging stations. 24/7 Emergency service available.">
+    
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Script -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "HVAC Guyz & Plumbing Inc",
+      "image": "https://images.unsplash.com/photo-1581094288338-2314dddb7bc3",
+      "url": "https://hvacguyz.com",
+      "telephone": "+14702554535",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1544 Piedmont Ave NE, Suite 105",
+        "addressLocality": "Atlanta",
+        "addressRegion": "GA",
+        "postalCode": "30324",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.7967,
+        "longitude": -84.3685
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --brand-blue: #0ea5e9;
+            --brand-orange: #f97316;
+            --dark-bg: #0f172a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: #f8fafc;
+        }
+
+        h1, h2, h3, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Bento Grid Specifics */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(300px, auto);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .bento-grid { grid-template-columns: 1fr; }
+        }
+
+        .bento-item-large { grid-column: span 2; grid-row: span 2; }
+        .bento-item-header { grid-column: span 2; }
+
+        /* Lenis Smooth Scroll */
+        html.lenis {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-bright {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Cursor */
+        #custom-cursor {
+            width: 20px;
+            height: 20px;
+            background: var(--brand-blue);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: screen;
+            transition: transform 0.1s ease;
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            #custom-cursor { display: block; }
+        }
+
+        /* Hero Parallax */
+        .parallax-bg {
+            transform: translateY(var(--scroll-offset, 0));
+            transition: transform 0.1s linear;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="custom-cursor"></div>
+
+    <!-- Header / Nav -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between glass rounded-2xl px-6 py-3 border border-white/5 shadow-2xl">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center text-white shadow-lg shadow-sky-500/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14.75V3c0-.55.45-1 1-1h10l5 5v14c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1v-4.25"></path><path d="M16 2v5h5"></path><path d="M8 10h5"></path><path d="M8 14h5"></path><path d="M8 18h5"></path></svg>
+                </div>
+                <div>
+                    <span class="block font-bold text-lg tracking-tight leading-tight uppercase">HVAC Guyz</span>
+                    <span class="block text-[10px] font-bold text-sky-400 uppercase tracking-[0.2em] leading-tight">& Plumbing Inc</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium hover:text-sky-400 transition-colors uppercase tracking-wider">Services</a>
+                <a href="#about" class="text-sm font-medium hover:text-sky-400 transition-colors uppercase tracking-wider">About</a>
+                <a href="#reviews" class="text-sm font-medium hover:text-sky-400 transition-colors uppercase tracking-wider">Reviews</a>
+            </div>
+
+            <a href="tel:+14702554535" class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-2.5 rounded-xl font-bold text-sm transition-all transform hover:scale-105 shadow-lg shadow-sky-500/25 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-call"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path><path d="M14.05 2a9 9 0 0 1 8 7.94"></path><path d="M14.05 6A5 5 0 0 1 18 10"></path></svg>
+                (470) 255-4535
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/90 to-slate-900 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?q=80&w=2070&auto=format&fit=crop" alt="HVAC Repair Atlanta" class="w-full h-full object-cover parallax-bg" loading="eager">
+        </div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-6 w-full py-20">
+            <div class="max-w-3xl reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-bright mb-8 border border-white/10 shadow-xl">
+                    <span class="flex h-2 w-2 rounded-full bg-sky-500 animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Trusted Experts in Atlanta</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight mb-8">
+                    Smart HVAC <br>
+                    <span class="text-gradient">For Atlanta Homes.</span>
+                </h1>
+                
+                <p class="text-xl text-slate-400 leading-relaxed max-w-xl mb-12">
+                    Premium heating, cooling, and plumbing solutions. From ultra-fast AC repairs to future-ready EV charging stations, we deliver what others can't.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <a href="tel:+14702554535" class="w-full sm:w-auto bg-sky-500 hover:bg-sky-600 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-2xl shadow-sky-500/30 flex items-center justify-center gap-3 group">
+                        Get An Upgrade Now
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><path d="m9 18 6-6-6-6"></path></svg>
+                    </a>
+                    
+                    <div class="flex items-center gap-4 px-6 py-5 rounded-2xl glass border border-white/5">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 rounded-full border-2 border-slate-900 bg-sky-500 flex items-center justify-center text-xs font-bold leading-none">4.8</div>
+                        </div>
+                        <div>
+                            <div class="flex text-yellow-500 mb-0.5">★★★★★</div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-500">37+ Google Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Testimonial -->
+        <div class="hidden xl:block absolute right-20 top-1/2 -translate-y-1/2 w-96 reveal delay-300">
+            <div class="glass p-8 rounded-[2rem] shadow-2xl border border-white/10 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-sky-500/10 blur-[50px] -mr-16 -mt-16 group-hover:bg-sky-500/20 transition-colors"></div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-sky-500 rounded-xl flex items-center justify-center text-white text-xl font-bold">
+                        ★
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg leading-none">Rohan is the best!</p>
+                        <p class="text-sm text-slate-500 mt-1">"Pro & Reliable"</p>
+                    </div>
+                </div>
+                <p class="text-slate-300 italic leading-relaxed">
+                    "Rohan is so professional, reliable and knowledgeable. My HVAC was fixed on the same day as the call out."
+                </p>
+                <div class="mt-6 flex items-center justify-between">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest leading-none">Thashnee Govender</span>
+                    <span class="text-xs font-bold text-sky-500 leading-none">Verified Client</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 relative bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24 reveal">
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-6 outfit leading-none tracking-tight">Full System Command.</h2>
+                <p class="text-slate-500 text-lg max-w-2xl mx-auto">High-margin expertise for every corner of your property.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Main Service Card -->
+                <div class="bento-item-large glass p-10 rounded-[2.5rem] hover:bg-slate-900/50 transition-all border border-white/5 group reveal flex flex-col justify-between overflow-hidden relative">
+                    <div class="z-10">
+                        <div class="w-16 h-16 bg-sky-500/10 rounded-2xl flex items-center justify-center text-sky-400 mb-8 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fan"><path d="M10.827 16.379a6.082 6.082 0 0 1-8.618-7.002l5.412 1.45a6.082 6.082 0 0 1 7.002-8.618l-1.45 5.412a6.082 6.082 0 0 1 8.618 7.002l-5.412-1.45a6.082 6.082 0 0 1-7.002 8.618l1.45-5.412Z"></path><path d="M12 12v.01"></path></svg>
+                        </div>
+                        <h3 class="text-4xl font-bold mb-4 outfit">Heating & AC Mastery</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed max-w-sm mb-6">Complete seasonal dominance. We install and repair systems that stay silent while working harder.</p>
+                    </div>
+                    <div class="z-10 space-y-4">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-400">
+                            <li class="flex items-center gap-2 font-medium bg-white/5 p-3 rounded-xl"><span class="text-sky-500 text-xl">✓</span> Smart HVAC Installs</li>
+                            <li class="flex items-center gap-2 font-medium bg-white/5 p-3 rounded-xl"><span class="text-sky-500 text-xl">✓</span> 24/7 Rapid Repair</li>
+                            <li class="flex items-center gap-2 font-medium bg-white/5 p-3 rounded-xl"><span class="text-sky-500 text-xl">✓</span> Filter Optimization</li>
+                            <li class="flex items-center gap-2 font-medium bg-white/5 p-3 rounded-xl"><span class="text-sky-500 text-xl">✓</span> Zone Control Systems</li>
+                        </ul>
+                    </div>
+                    <!-- Decorative back image -->
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop" class="absolute right-0 bottom-0 w-1/2 h-1/2 object-cover opacity-20 transition-opacity group-hover:opacity-40" alt="">
+                </div>
+
+                <!-- Secondary Cards -->
+                <div class="glass p-8 rounded-[2rem] hover:bg-slate-900/50 transition-all border border-white/5 group reveal flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6 group-hover:rotate-12 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets"><path d="M7 16.3c2.2 0 4-1.8 4-4 0-3.3-4-8-4-8s-4 4.7-4 8c0 2.2 1.8 4 4 4Z"></path><path d="M17 14.5c1.4 0 2.5-1.1 2.5-2.5 0-2.1-2.5-5.1-2.5-5.1s-2.5 3-2.5 5.1c0 1.4 1.1 2.5 2.5 2.5Z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 outfit">Elite Plumbing</h3>
+                        <p class="text-slate-500 text-sm">Water heaters, leaks, and fixture upgrades with zero mess.</p>
+                    </div>
+                    <a href="tel:+14702554535" class="text-sky-500 font-bold text-sm flex items-center gap-2 mt-6 uppercase tracking-widest">Fix Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+                </div>
+
+                <!-- EV Charging -->
+                <div class="glass p-8 rounded-[2rem] hover:bg-slate-900/50 transition-all border border-white/5 group reveal flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-6 group-hover:rotate-12 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14.75V3c0-.55.45-1 1-1h10l5 5v14c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1v-4.25"></path><path d="M16 2v5h5"></path><path d="M8 10h5"></path><path d="M8 14h5"></path><path d="M8 18h5"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 outfit">Future Energy</h3>
+                        <p class="text-slate-500 text-sm">Certified EV charging station installs and panel upgrades.</p>
+                    </div>
+                    <a href="tel:+14702554535" class="text-indigo-400 font-bold text-sm flex items-center gap-2 mt-6 uppercase tracking-widest">Connect <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></a>
+                </div>
+
+                <!-- Wide Bottom Card -->
+                <div class="bento-item-header glass p-8 rounded-[2rem] border border-white/5 reveal flex flex-col sm:flex-row items-center justify-between gap-8 bg-sky-500/5">
+                    <div class="max-w-md">
+                        <h3 class="text-2xl font-bold mb-2 outfit">Commercial Scale?</h3>
+                        <p class="text-slate-500">We manage multi-unit properties and industrial complexes across GA.</p>
+                    </div>
+                    <button class="bg-white text-slate-950 px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform">Request Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-32 bg-slate-900 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="flex-1 reveal">
+                    <h2 class="text-4xl md:text-7xl font-extrabold mb-10 outfit leading-[0.95] tracking-tighter">The Best <br>In The City.</h2>
+                    <p class="text-xl text-slate-400 mb-12 font-medium">We don't just clear blocks and fix fans. We engineer comfort. From Ansley Mall II to the whole Atlanta metro, we've built a reputation for true technical dominance.</p>
+                    
+                    <div class="flex items-center gap-12">
+                        <div>
+                            <p class="text-5xl font-extrabold text-sky-500 mb-2 outfit leading-none">4.8</p>
+                            <p class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Stars Rated</p>
+                        </div>
+                        <div class="h-10 w-px bg-white/10"></div>
+                        <div>
+                            <p class="text-5xl font-extrabold text-white mb-2 outfit leading-none">24H</p>
+                            <p class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Rapid Response</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 relative reveal delay-200">
+                    <div class="relative rounded-[3.5rem] overflow-hidden shadow-2xl border border-white/5 aspect-square">
+                        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop" alt="Expert Technician" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-sky-500/10 mix-blend-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Featured Review -->
+    <section id="reviews" class="py-32 bg-slate-950 px-6">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-4xl md:text-5xl font-black mb-20 outfit tracking-tight">Atlanta Loves Us.</h2>
+            
+            <div class="glass p-12 md:p-20 rounded-[3.5rem] border border-white/5 relative group transition-all hover:bg-slate-900/50">
+                <div class="text-6xl text-sky-500/20 absolute top-10 left-10 transition-transform group-hover:scale-110">"</div>
+                <div class="relative z-10">
+                    <div class="flex justify-center text-yellow-500 mb-8 text-2xl font-bold tracking-[0.3em]">★★★★★</div>
+                    <p class="text-2xl md:text-3xl italic text-slate-200 leading-normal mb-12 outfit font-medium">
+                        "By far the best HVAC company I’ve ever worked with. They took the time to truly help me with my system when other companies turned me down. I highly recommend."
+                    </p>
+                    <div class="flex flex-col items-center">
+                        <span class="block font-bold text-xl uppercase tracking-widest outfit mb-2">Reshaun Jones</span>
+                        <span class="block text-xs font-bold text-sky-500 uppercase tracking-[0.2em]">Atlanta Resident</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- FAQ Section -->
+    <section class="py-32 bg-slate-950 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-16 outfit text-center tracking-tight">Common Questions.</h2>
+            <div class="space-y-4">
+                <details class="glass group rounded-2xl overflow-hidden border border-white/5 transition-all outline-none">
+                    <summary class="p-8 font-bold text-xl outfit cursor-pointer list-none flex justify-between items-center group-open:bg-sky-500/10">
+                        How quickly can you resolve an emergency?
+                        <span class="text-sky-500 transition-transform group-open:rotate-180">↓</span>
+                    </summary>
+                    <div class="p-8 pt-0 text-slate-400 leading-relaxed">
+                        We prioritize emergency calls. In Atlanta, we typically arrive within 2-4 hours for critical system failures to ensure your comfort isn't compromised.
+                    </div>
+                </details>
+
+                <details class="glass group rounded-2xl overflow-hidden border border-white/5 transition-all outline-none">
+                    <summary class="p-8 font-bold text-xl outfit cursor-pointer list-none flex justify-between items-center group-open:bg-sky-500/10">
+                        Are your technicians certified?
+                        <span class="text-sky-500 transition-transform group-open:rotate-180">↓</span>
+                    </summary>
+                    <div class="p-8 pt-0 text-slate-400 leading-relaxed">
+                        Absolutely. Every member of our team is NATE-certified and undergoes continuous training on the latest high-efficiency HVAC and EV systems.
+                    </div>
+                </details>
+
+                <details class="glass group rounded-2xl overflow-hidden border border-white/5 transition-all outline-none">
+                    <summary class="p-8 font-bold text-xl outfit cursor-pointer list-none flex justify-between items-center group-open:bg-sky-500/10">
+                        Do you offer warranty on repairs?
+                        <span class="text-sky-500 transition-transform group-open:rotate-180">↓</span>
+                    </summary>
+                    <div class="p-8 pt-0 text-slate-400 leading-relaxed">
+                        Yes, we provide a 1-year labor warranty on all repairs and honor all manufacturer warranties on parts and new system installations.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section class="py-32 bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-5 gap-20">
+                <div class="lg:col-span-2 reveal">
+                    <h2 class="text-4xl md:text-6xl font-black mb-10 outfit tracking-tighter leading-none">Need Support?<br><span class="text-gradient">We got you.</span></h2>
+                    
+                    <div class="space-y-8 mb-16">
+                        <div class="flex items-center gap-8 group">
+                            <div class="w-16 h-16 bg-sky-500 rounded-3xl flex items-center justify-center text-white text-2xl shadow-xl shadow-sky-500/30 group-hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-incoming"><polyline points="16 2 22 8 16 14"></polyline><line x1="22" y1="2" x2="16" y2="8"></line><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-2">Instant Connect</p>
+                                <a href="tel:+14702554535" class="text-3xl font-black hover:text-sky-400 transition-colors outfit">(470) 255-4535</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-8 group">
+                            <div class="w-16 h-16 bg-slate-800 rounded-3xl flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform border border-white/5 shadow-2xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-2">Visit Ansley Mall II</p>
+                                <p class="text-xl font-bold outfit">Ansley Mall II, 1544 Piedmont Ave NE, Suite 105<br>Atlanta, GA 30324, USA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/hvacguyz/" target="_blank" class="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center hover:bg-sky-600 transition-all border border-white/5">
+                            <svg class="w-6 h-6 outline-none" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/hvacguyz/" target="_blank" class="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center hover:bg-gradient-to-tr from-yellow-600 via-pink-600 to-purple-600 transition-all border border-white/5">
+                            <svg class="w-6 h-6 outline-none" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-3 reveal delay-200">
+                    <div class="rounded-[3.5rem] overflow-hidden h-[550px] border border-white/5 shadow-2xl">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=1544 Piedmont Ave NE Suite 105 Atlanta GA 30324&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(90%) contrast(90%);" 
+                            allowfullscreen="">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-slate-950 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-sky-500 rounded-xl flex items-center justify-center text-white shadow-xl shadow-sky-500/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.75V3c0-.55.45-1 1-1h10l5 5v14c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1v-4.25"></path><path d="M16 2v5h5"></path><path d="M8 10h5"></path><path d="M8 14h5"></path><path d="M8 18h5"></path></svg>
+                </div>
+                <span class="font-bold text-slate-500 outfit uppercase tracking-[0.15em] text-sm">HVAC Guyz & Plumbing Inc</span>
+            </div>
+            
+            <p class="text-sm font-medium text-slate-600">&copy; 2026. Made for high performance. Managed by AI site agency.</p>
+            
+            <div class="flex gap-8">
+                <a href="#" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-600 hover:text-white transition-colors">Privacy</a>
+                <a href="#" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-600 hover:text-white transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis({
+            lerp: 0.1,
+            smoothWheel: true
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Reveal Animations (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Custom Cursor Logic
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+
+        // Parallax Bg Logic
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            document.querySelectorAll('.parallax-bg').forEach(el => {
+                el.style.setProperty('--scroll-offset', `${scroll * 0.3}px`);
+            });
+        });
+    </script>
+</body>
+</html>

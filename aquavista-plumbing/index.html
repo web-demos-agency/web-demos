@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaVista Plumbing | Brisbane & Redlands Area</title>
+    <meta name="description" content="Family-owned plumbing specialists in Wynnum West. Experts in pool plumbing, whole home filtration, and general repairs. Call +61 416 808 993.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            900: '#134e4a',
+                            950: '#042f2e',
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #020617; /* Deep slate */
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        
+        .glass {
+            background: rgba(13, 148, 136, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(45, 212, 191, 0.15);
+        }
+        
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #2dd4bf, #38bdf8);
+        }
+
+        .cursor {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #2dd4bf;
+            mix-blend-mode: screen;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s;
+        }
+
+        .cursor-active {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(45, 212, 191, 0.3);
+            border: 1px solid #2dd4bf;
+        }
+
+        @media (min-width: 768px) {
+            body { cursor: none; }
+            a, button { cursor: none; }
+        }
+    </style>
+</head>
+<body class="antialiased font-sans selection:bg-brand-500 selection:text-white">
+
+    <!-- Custom Cursor -->
+    <div class="cursor hidden md:block" id="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 transform translate-y-0" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center shadow-lg shadow-brand-500/30">
+                        <i data-lucide="waves" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <span class="font-display font-extrabold text-2xl tracking-tighter">AquaVista <span class="text-brand-400 font-medium">Plumbing</span></span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition-colors magnetic-link">Services</a>
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors magnetic-link">About Us</a>
+                    <a href="#reviews" class="text-sm font-medium text-slate-300 hover:text-white transition-colors magnetic-link">Reviews</a>
+                    <a href="tel:+61416808993" class="group relative px-6 py-2.5 font-bold text-slate-950 rounded-full bg-brand-400 hover:bg-brand-300 transition-all duration-300 shadow-[0_0_20px_rgba(45,212,191,0.3)] hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] magnetic-link">
+                        <span class="relative z-10 flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            +61 416 808 993
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[100vh] flex items-center pt-20 overflow-hidden" id="hero">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[#020617]/80 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-20"></div>
+            <img src="https://images.unsplash.com/photo-1576013551627-1423871b65e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Beautiful Pool Area" class="w-full h-full object-cover parallax-bg" loading="lazy">
+        </div>
+        
+        <!-- Ambient Glowing Orbs -->
+        <div class="absolute top-1/4 -left-64 w-96 h-96 bg-brand-500/30 rounded-full blur-[120px] z-10"></div>
+        <div class="absolute bottom-1/4 -right-64 w-96 h-96 bg-cyan-700/30 rounded-full blur-[120px] z-10"></div>
+
+        <div class="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col pt-12 md:pt-0">
+            <div class="flex flex-col md:w-3/4 lg:w-2/3">
+                <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 text-sm font-bold w-max mb-8 gsap-fade-up">
+                    <span class="relative flex h-2.5 w-2.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
+                    </span>
+                    Brisbane, Redlands & Surrounds
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-extrabold tracking-tight mb-6 leading-[1.1] gsap-fade-up">
+                    Pristine Pools.<br>
+                    <span class="text-gradient">Pure Water Solutions.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-300 max-w-2xl mb-12 leading-relaxed gsap-fade-up border-l-2 border-brand-500 pl-4">
+                    Your local family-owned experts in advanced pool plumbing, whole home filtration systems, and reliable emergency repairs across South East Queensland.
+                </p>
+
+                <div class="flex flex-wrap gap-4 items-center gsap-fade-up">
+                    <a href="https://wa.me/61416808993" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#20b858] text-white font-bold text-lg transition-all duration-300 shadow-[0_0_30px_rgba(34,197,94,0.3)] flex items-center gap-2 magnetic-link">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        WhatsApp Us
+                    </a>
+                    <a href="https://www.facebook.com/brisplumber/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-[#1877F2] hover:bg-[#166fe5] text-white font-bold text-lg transition-all duration-300 shadow-[0_0_30px_rgba(24,119,242,0.3)] flex items-center gap-2 magnetic-link">
+                        <i data-lucide="facebook" class="w-6 h-6"></i>
+                        Message on Facebook
+                    </a>
+                    <a href="tel:+61416808993" class="px-8 py-4 rounded-full glass hover:bg-white/10 text-white font-bold text-lg transition-all duration-300 border border-white/20 flex items-center gap-2 magnetic-link">
+                        <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        Call +61 416 808 993
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="mt-16 flex flex-wrap items-center gap-6 md:gap-10 gsap-fade-up">
+                    <div class="flex items-center gap-3">
+                        <div class="flex text-brand-400">
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        </div>
+                        <div>
+                            <div class="text-white font-bold text-lg leading-none">5.0 Rating</div>
+                            <div class="text-sm font-medium text-slate-400">Based on 51 authentic Google reviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-brand-400 font-bold tracking-widest uppercase text-sm mb-3">What We Do Best</h2>
+                    <h3 class="text-4xl md:text-5xl font-display font-bold">Specialised <span class="text-white">Plumbing</span> Services</h3>
+                </div>
+                <p class="text-slate-400 text-lg max-w-md">From intricate pool networks to complete home filtration overhauls. We bring premium yakka to every site.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-500 overflow-hidden relative group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-700"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-8 border border-cyan-500/20 text-cyan-400">
+                            <i data-lucide="droplet" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-display">Whole Home Filtration</h4>
+                        <p class="text-slate-400 leading-relaxed text-lg">Experience crystal clear, pure water straight from every tap. We install and maintain advanced domestic filtration systems.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="glass p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-500 overflow-hidden relative group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-700"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-brand-500/10 flex items-center justify-center mb-8 border border-brand-500/20 text-brand-400">
+                            <i data-lucide="waves" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-display">Pool Plumbing Specialists</h4>
+                        <p class="text-slate-400 leading-relaxed text-lg">Precision pipework for new pools and renovations. We ensure your pool's circulation and pump systems flow flawlessly.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-500 overflow-hidden relative group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-700"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-8 border border-blue-500/20 text-blue-400">
+                            <i data-lucide="wrench" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-display">Installations & Repairs</h4>
+                        <p class="text-slate-400 leading-relaxed text-lg">General domestic and commercial plumbing repairs perfectly executed. We handle the dirty work so you don't have to.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-500 overflow-hidden relative group lg:col-span-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-700"></div>
+                    <div class="relative z-10 flex flex-col sm:flex-row gap-8 items-start">
+                        <div class="w-16 h-16 rounded-2xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 text-indigo-400 shrink-0">
+                            <i data-lucide="zap" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-4 font-display">24/7 Emergency Services</h4>
+                            <p class="text-slate-400 leading-relaxed text-lg">Burst pipe flooding your yard? Pump system failed? Rain, hail, or shine, our tradies are on call around the clock to secure your property.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-500 overflow-hidden relative group flex flex-col justify-center items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-6 text-slate-300">
+                        <i data-lucide="calculator" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 font-display">Online Estimates</h4>
+                    <p class="text-slate-400 mb-6">Get a quote without the hassle.</p>
+                    <a href="https://wa.me/61416808993" target="_blank" class="text-brand-400 font-bold flex items-center gap-2 hover:text-brand-300 transition-colors magnetic-link">
+                        Get Estimate <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / About -->
+    <section id="about" class="py-32 bg-[#020617] border-y border-brand-500/10 relative overflow-hidden">
+        <div class="absolute -left-96 top-0 w-[800px] h-[800px] bg-brand-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative order-2 lg:order-1">
+                    <div class="absolute -inset-4 bg-gradient-to-br from-brand-500/20 to-cyan-500/20 opacity-50 blur-2xl rounded-3xl"></div>
+                    <a href="water_filtration.png" target="_blank" class="relative z-10 block group cursor-pointer" title="Click to enlarge">
+                        <div class="absolute inset-0 bg-brand-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[2rem] z-20 flex items-center justify-center pointer-events-none">
+                            <i data-lucide="zoom-in" class="w-12 h-12 text-white drop-shadow-lg"></i>
+                        </div>
+                        <img src="water_filtration.png" alt="Water Filtration System" class="relative rounded-[2rem] border border-white/10 shadow-2xl parallax-img object-cover h-[600px] w-full transition-transform duration-500 group-hover:scale-[1.02]" loading="lazy">
+                    </a>
+                    
+                    <div class="absolute top-10 -right-10 glass p-6 rounded-2xl z-20 border border-brand-500/20 shadow-2xl hidden md:flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="w-12 h-12 rounded-full bg-brand-500 flex items-center justify-center text-slate-950">
+                            <i data-lucide="check-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="text-xl font-bold font-display text-white">Family Owned</div>
+                            <div class="text-sm text-brand-400 font-medium">Local Brisbane Business</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-brand-400 font-bold tracking-widest uppercase text-sm mb-3">Community First</h2>
+                    <h3 class="text-3xl md:text-5xl font-display font-bold mb-6">Proudly Servicing <br><span class="text-white">South East QLD.</span></h3>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        AquaVista Plumbing isn't a faceless corporation. We are a dedicated family-run operation working out of Wynnum West, committed to providing top-tier workmanship at honest, affordable prices. We treat your property with the same respect we'd treat our own.
+                    </p>
+                    
+                    <div class="space-y-8 mt-10">
+                        <div class="flex gap-5">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-400 to-cyan-600 flex items-center justify-center flex-shrink-0 shadow-lg text-white">
+                                <i data-lucide="map" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-xl font-display mb-1">Extensive Service Area</h4>
+                                <p class="text-slate-400">Serving Brisbane, Redlands, Logan, Moreton Bay, and the Sunshine Coast.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-400 to-cyan-600 flex items-center justify-center flex-shrink-0 shadow-lg text-white">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-xl font-display mb-1">Fully Certified</h4>
+                                <p class="text-slate-400">Fully licensed, insured, and deeply experienced in modern plumbing tech.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.facebook.com/brisplumber/" target="_blank" class="mt-12 inline-flex items-center gap-3 px-8 py-4 rounded-full glass border border-blue-500/30 hover:bg-blue-600/10 hover:border-blue-500/50 transition-all duration-300 text-white font-bold magnetic-link">
+                        <i data-lucide="facebook" class="w-5 h-5 text-blue-400"></i>
+                        Check out our work on Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-brand-400 font-bold tracking-widest uppercase text-sm mb-3">Straight From the Locals</h2>
+            <h3 class="text-4xl md:text-5xl font-display font-bold mb-16">Perfect 5-Star Track Record</h3>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <!-- Review 1 -->
+                <div class="glass p-8 rounded-3xl border border-white/5">
+                    <div class="flex items-center gap-1 text-brand-400 mb-6">
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                    </div>
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed">"Absolutely ripping service. Turned up when they said they would, fixed the pool plumbing issue that two other guys couldn't figure out. Proper legends."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-900 flex items-center justify-center font-bold text-brand-300">JD</div>
+                        <div>
+                            <div class="font-bold text-white font-display">John D.</div>
+                            <div class="text-sm text-slate-500">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass p-8 rounded-3xl border border-white/5 bg-white/5 transform md:-translate-y-4">
+                    <div class="flex items-center gap-1 text-brand-400 mb-6">
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                    </div>
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed">"Got AquaVista in to install a whole house water filtration system. The water tastes incredible now, and the installation process was completely neat and hassle-free. Thanks team!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center font-bold text-purple-300">SM</div>
+                        <div>
+                            <div class="font-bold text-white font-display">Sarah M.</div>
+                            <div class="text-sm text-slate-500">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass p-8 rounded-3xl border border-white/5">
+                    <div class="flex items-center gap-1 text-brand-400 mb-6">
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-brand-400"></i>
+                    </div>
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed">"Best plumbers in Brisbane. Fair quote, no mucking around, and very polite. Everything was left clean. Will definitely be using them again for any future work."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center font-bold text-blue-300">TR</div>
+                        <div>
+                            <div class="font-bold text-white font-display">Tom R.</div>
+                            <div class="text-sm text-slate-500">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="mt-12 text-slate-400">Join 50+ satisfied customers. <a href="https://wa.me/61416808993" class="text-brand-400 font-medium hover:underline magnetic-link">Book your job today.</a></p>
+        </div>
+    </section>
+
+    <!-- Map & Contact Section -->
+    <section class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-0 overflow-hidden rounded-[2rem] border border-brand-500/20 shadow-2xl">
+                
+                <!-- Contact Info -->
+                <div class="p-10 md:p-16 flex flex-col justify-center bg-brand-950/80 backdrop-blur-md relative z-10 border-r border-brand-500/10">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold mb-6 text-white">Let's Get Sorted.</h2>
+                    <p class="text-brand-100/70 mb-10 text-lg">Reach out for quick estimates or urgent emergency dispatches. We're ready when you are.</p>
+                    
+                    <div class="space-y-8 mb-12">
+                        <div class="flex items-start gap-5 group">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-500/20 flex items-center justify-center group-hover:bg-brand-500/30 transition-colors shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-brand-400"></i>
+                            </div>
+                            <div class="mt-1">
+                                <p class="text-sm text-brand-200/50 uppercase tracking-wider font-bold mb-1">Service Area</p>
+                                <p class="font-medium text-white text-lg">Wynnum West, QLD 4178</p>
+                                <p class="text-brand-100/60 mt-1">Brisbane, Redlands, Logan, Sunshine Coast</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5 group">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-500/20 flex items-center justify-center group-hover:bg-brand-500/30 transition-colors shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-brand-400"></i>
+                            </div>
+                            <div class="mt-1">
+                                <p class="text-sm text-brand-200/50 uppercase tracking-wider font-bold mb-1">Hours</p>
+                                <p class="font-medium text-brand-400 text-lg">Open 24 Hours</p>
+                                <p class="text-brand-100/60 mt-1">For emergency callouts anytime.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <a href="https://wa.me/61416808993" target="_blank" class="w-full px-6 py-4 rounded-xl bg-[#25D366] hover:bg-[#20b858] text-white font-bold transition-all duration-300 flex items-center justify-center gap-3 magnetic-link shadow-lg shadow-[#25D366]/20">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            WhatsApp (+61 416 808 993)
+                        </a>
+                        <a href="https://www.facebook.com/brisplumber/" target="_blank" class="w-full px-6 py-4 rounded-xl bg-[#1877F2] hover:bg-[#166fe5] text-white font-bold transition-all duration-300 flex items-center justify-center gap-3 magnetic-link shadow-lg shadow-[#1877F2]/20">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                            AquaVista Facebook Page
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps iframe -->
+                <div class="h-[500px] lg:h-auto min-h-[500px] relative">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Wynnum+West,+QLD+4178,+Australia&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                        class="absolute inset-0 w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-1000 opacity-90 hover:opacity-100" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#020617] pt-16 pb-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-400 to-cyan-600 flex items-center justify-center">
+                        <i data-lucide="waves" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl text-white">AquaVista <span class="text-brand-400 font-medium">Plumbing</span></span>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/brisplumber/" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-brand-500/30 transition-colors magnetic-link">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <div class="text-slate-600 text-sm text-center md:text-right">
+                    &copy; <span id="year"></span> AquaVista Plumbing. All rights reserved.<br>
+                    Wynnum West, Brisbane, QLD. Service Area Business.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    
+    <script>
+        // Init properties
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth Scroll (Lenis) exactly to rules
+        const lenis = new Lenis({
+            lerp: 0.1,
+            smoothWheel: true
+        });
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+
+        // Custom Cursor
+        const cursor = document.getElementById('custom-cursor');
+        const magneticLinks = document.querySelectorAll('.magnetic-link, a, button');
+
+        document.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.1,
+                ease: "power2.out"
+            });
+        });
+
+        magneticLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => cursor.classList.add('cursor-active'));
+            link.addEventListener('mouseleave', () => cursor.classList.remove('cursor-active'));
+        });
+
+        // GSAP Setup
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Navbar blur behavior
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass', 'py-1');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('glass', 'py-1');
+                nav.classList.add('py-4');
+            }
+        });
+
+        // Intro / scroll fade ups
+        gsap.utils.toArray('.gsap-fade-up').forEach(element => {
+            gsap.fromTo(element, 
+                { y: 40, opacity: 0 },
+                {
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 85%",
+                    },
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }
+            );
+        });
+
+        // Parallax depth
+        gsap.to(".parallax-bg", {
+            yPercent: 30,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#hero",
+                start: "top top", 
+                end: "bottom top",
+                scrub: true
+            } 
+        });
+
+        gsap.to(".parallax-img", {
+            yPercent: 15,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top bottom", 
+                end: "bottom top",
+                scrub: true
+            } 
+        });
+    </script>
+</body>
+</html>
