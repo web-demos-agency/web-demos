@@ -26,12 +26,12 @@ I've already taken the liberty of building a **Premium Preview** of what your bu
 - **Technical SEO (JSON-LD):** Linking your new site directly to your Google Maps data to boost your local ranking.
 
 ### 🎁 The Offer
-I’ve already done the heavy lifting. You can see the live demo here: [Ссылка на демо]
+I’ve already done the heavy lifting. You can see the live demo here: https://web-demos-1.pages.dev/plumbmasters-atlanta/
 
 If you want to own this site, put it on `plumbmastersatl.com`, and start capturing 2x more high-margin leads, let’s talk. 
 
 **Let’s turn those 100+ reviews into a 24/7 lead machine.**
 
 Best regards,
-Дизайнер
+Designer
 AI Site Agency

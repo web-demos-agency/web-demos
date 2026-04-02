@@ -1,31 +1,37 @@
-# Sales Outreach: HVAC Guyz & Plumbing Inc
+# Sales outreach: HVAC Guyz & Plumbing Inc (Rohan)
 
-**Target**: Rohan / Management at HVAC Guyz & Plumbing Inc
-**Subject**: I built a premium prototype for HVAC Guyz & Plumbing (Check it out)
+**Subject:** Rohan, your 4.8-star reputation deserves a digital home that works as hard as you do.
 
 ---
 
-Hi Rohan,
+### 🔥 The Context
+Rohan, I've been analyzing the plumbing and HVAC market in Atlanta, and your performance on Google is **unstoppable**. 
+- 4.8 Average Rating.
+- Clients like Thashnee Govender and Reshaun Jones are calling you a "Professional Legend" and "Knowledgeable Expert".
 
-I was looking at your business online and noticed how strong your reputation is in Atlanta (4.8 stars is impressive!). However, I noticed your current web presence doesn't quite match the high-end level of service you provide.
+Specifically, your expertise in **smart HVAC systems** and **EV Charging installs** is exactly what high-end Atlanta homeowners are searching for right now.
 
-To show you what's possible, **I’ve already built a custom, high-performance prototype for you here:**
-[Link to your hosted prototype, e.g., hvac-guyz.pages.dev]
+### ⚠️ The Opportunity Gap
+Currently, when a high-value client finds you on Google Maps, they see a presence that doesn't quite match the level of technical dominance you provide.
+- You are losing the "Premium" segment who wants to see your work, your team, and book you directly from their phone.
+- You are relying entirely on the "Maps" algorithm, which can change any day.
 
-### Why this works for your business:
-1. **Designed for Conversion**: Large, clear buttons for calling and social media—perfect for emergency calls in Atlanta.
-2. **Tech-Forward Hero**: We've highlighted your **EV Charging Station** service, which is a massive differentiator in today's market.
-3. **Mobile-First**: It’s ultra-fast and looks stunning on iPhones and Androids where most of your customers are searching for you.
+### 🛠 The Solution: HVAC Guyz 2.0
+I've already taken the liberty of building a **Premium Preview** of what your business should look like online. No generic templates, no cheap builders. 
 
-### We keep it simple (The Starter Plan):
-*   **$0 Upfront Setup Fee**: I’ve already done the heavy lifting.
-*   **$149 USD / month**: This covers ultra-fast hosting, security, and us handling all text/photo updates for you. You never have to touch a computer.
+**I've built you a custom-engineered landing page that features:**
+- **The "Bento Grid" Service Layout:** Showcasing your HVAC dominance and EV Charging future-proofing.
+- **The "Social Proof" Block:** Putting your personal brand front and center to build instant trust with quotes from your actual clients.
+- **Technical SEO (JSON-LD):** Linking your new site directly to your Google Maps data to boost your local ranking.
 
-If you’d like to keep this site, connect your own domain (e.g., hvacguyzatl.com), or see our more advanced SEO packages, just let me know.
+### 🎁 The Offer
+I’ve already done the heavy lifting. You can see the live demo here: https://web-demos-1.pages.dev/hvac-guyz-plumbing/
 
-**Does this look like something that would help you win more jobs in the city?**
+If you want to own this site, put it on `hvacguyzatl.com`, and start capturing 2x more high-margin leads, let’s talk. 
+
+**Let’s turn those five-star reviews into a 24/7 lead machine.**
 
 Best regards,
 
-[Your Name]
+Designer
 AI Site Agency
