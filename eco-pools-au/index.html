@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="bg-zinc-950 text-zinc-50 selection:bg-emerald-500/30">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Pools | Luxury Eco-Friendly Concrete Pools Brisbane & Gold Coast</title>
+    <meta name="description" content="Brisbane's leader in premium eco-friendly swimming pools. High-end concrete construction, magnesium systems, and luxury pool renovations since 2008.">
+    
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052c16',
+                        },
+                        accent: '#a7f3d0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <style>
+        html.lenis, html.lenis body { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+        .lenis.lenis-scrolling iframe { pointer-events: none; }
+
+        .glass { background: rgba(9, 9, 11, 0.6); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-gradient { background: linear-gradient(135deg, #fff 0%, #4ade80 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.23, 1, 0.32, 1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .parallax-bg { transform: scale(1.1); transition: transform 0.5s ease-out; }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-1/4 -translate-x-1/2 md:left-1/2 z-50 w-[95%] md:w-[90%] max-w-5xl">
+        <div class="glass rounded-full px-8 py-4 flex items-center justify-between shadow-2xl">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center rotate-3 overflow-hidden">
+                    <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM12 8v4"/><path d="M12 16h.01"/></svg>
+                </div>
+                <span class="font-display font-bold text-2xl tracking-tighter uppercase italic">Eco<span class="text-brand-400">Pools</span></span>
+            </div>
+            <div class="hidden lg:flex items-center gap-10 text-xs font-bold uppercase tracking-widest text-zinc-400">
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#funnel" class="hover:text-white transition-colors">Cost Guide</a>
+                <a href="#about" class="hover:text-white transition-colors">Expertise</a>
+                <a href="#contact" class="hover:text-white transition-colors">Enquire</a>
+            </div>
+            <a href="https://wa.me/611300792161" class="bg-brand-600 hover:bg-brand-500 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-full transition-all shadow-xl shadow-brand-600/25">Get a Quick Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1572331165267-85462a458a43?auto=format&fit=crop&q=80&w=2400" alt="Sustainable Luxury Pool" class="w-full h-full object-cover opacity-60 parallax-bg" id="hero-img">
+            <div class="absolute inset-0 bg-gradient-to-b from-zinc-950 via-transparent to-zinc-950"></div>
+        </div>
+        
+        <div class="container relative z-10 mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/20 px-5 py-2.5 rounded-full mb-10 reveal">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                <span class="text-brand-400 text-[10px] font-black uppercase tracking-[0.2em] leading-none">The Future of Sustainable Pools</span>
+            </div>
+            <h1 class="font-display text-6xl md:text-9xl font-bold mb-10 leading-[0.95] tracking-tight reveal">
+                <span class="text-gradient">Eco-Luxury</span><br>Redefined.
+            </h1>
+            <p class="max-w-2xl mx-auto text-zinc-400 text-sm md:text-base mb-14 leading-relaxed font-medium reveal">
+                Crafting the Gold Coast's most sustainable concrete pools. Low energy, chemical-free magnesium systems, and timeless architectural design.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 reveal">
+                <a href="#contact" class="w-full sm:w-auto bg-white text-zinc-950 font-black uppercase tracking-widest text-xs px-10 py-5 rounded-2xl shadow-2xl transition-all hover:-translate-y-1 hover:shadow-emerald-500/10">Start Your Build</a>
+                <a href="#services" class="w-full sm:w-auto glass text-white font-black uppercase tracking-widest text-xs px-10 py-5 rounded-2xl hover:bg-zinc-800/80 transition-all">Our Work</a>
+            </div>
+            
+            <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-12 max-w-4xl mx-auto opacity-40 reveal">
+                <div class="flex flex-col items-center gap-2">
+                    <span class="font-display font-bold text-2xl">4.8★</span>
+                    <span class="text-[9px] uppercase tracking-widest">Google Rating</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="font-display font-bold text-2xl">15+</span>
+                    <span class="text-[9px] uppercase tracking-widest">Years Experience</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="font-display font-bold text-2xl">300+</span>
+                    <span class="text-[9px] uppercase tracking-widest">Pools Built</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="font-display font-bold text-2xl">SPASA</span>
+                    <span class="text-[9px] uppercase tracking-widest">Accredited</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display text-4xl md:text-6xl font-bold mb-20 text-center reveal">Engineered for <span class="text-brand-400">Longevity.</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="glass p-10 rounded-[2.5rem] group hover:border-brand-500/30 transition-all reveal">
+                    <div class="w-16 h-16 bg-brand-900/30 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-600 transition-colors">
+                        <svg class="w-8 h-8 text-brand-400 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-6 italic uppercase tracking-tighter">Concrete Mastery</h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-8">Structural integrity that survives the Queensland climate. Bespoke architectural forms with premium pebble or glass finishes.</p>
+                </div>
+                <div class="glass p-10 rounded-[2.5rem] group border-brand-500/20 reveal">
+                    <div class="w-16 h-16 bg-brand-600 rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-6 italic uppercase tracking-tighter">Magnesium Systems</h3>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-8">Say goodbye to harsh chlorine. Our eco-mineral systems provide therapeutic water that is soft on the skin and clear as crystal.</p>
+                </div>
+                <div class="glass p-10 rounded-[2.5rem] group hover:border-brand-500/30 transition-all reveal">
+                    <div class="w-16 h-16 bg-brand-950/50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-600 transition-colors">
+                        <svg class="w-8 h-8 text-brand-400 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-6 italic uppercase tracking-tighter">Elite Renovations</h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-8">We take outdated backyards and transform them into high-performance retreats. Energy-efficient heating and smart automation included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Funnel (Educational Section) -->
+    <section id="funnel" class="py-32 bg-zinc-900/40">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-24 reveal">
+                <span class="text-brand-500 font-black uppercase tracking-[0.3em] text-[10px]">Your Pool Bible</span>
+                <h2 class="font-display text-5xl md:text-7xl font-bold mt-6 leading-none tracking-tighter italic uppercase">The <span class="text-gradient">Ultimate</span> FAQ</h2>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Cost Block -->
+                <div class="flex flex-col md:flex-row gap-16 items-start reveal">
+                    <div class="md:w-1/3">
+                        <h4 class="font-display text-3xl font-black text-brand-400 leading-none tracking-tighter italic uppercase">01. What does it cost in 2026?</h4>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-zinc-300 leading-relaxed text-sm lg:text-base">In Brisbane and the Gold Coast, a custom concrete pool build typically ranges from <span class="text-white font-bold">$60,000 to $120,000+</span>. The "Elite" factor comes from site accessibility, hydraulic engineering complexity, and your choice of finishes. We provide a transparent line-item quote with zero hidden surprises.</p>
+                        <ul class="mt-8 space-y-3 text-sm text-zinc-500 font-medium">
+                            <li class="flex gap-3 items-center"><div class="w-1 h-1 bg-brand-500 rounded-full"></div> Council Permits: $3k - $5k</li>
+                            <li class="flex gap-3 items-center"><div class="w-1 h-1 bg-brand-500 rounded-full"></div> Engineering & Earthworks: $8k - $15k</li>
+                            <li class="flex gap-3 items-center"><div class="w-1 h-1 bg-brand-500 rounded-full"></div> Filtration & Smart Gear: $7k - $12k</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="border-zinc-800">
+
+                <!-- Timeline Block -->
+                <div class="flex flex-col md:flex-row gap-16 items-start reveal">
+                    <div class="md:w-1/3">
+                        <h4 class="font-display text-3xl font-black text-brand-400 leading-none tracking-tighter italic uppercase">02. How long to swim?</h4>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-zinc-300 leading-relaxed text-sm lg:text-base">Quality cannot be rushed. Our typical build timeline is <span class="text-white font-bold">12 to 16 weeks</span> from permit approval. Concrete requires a "curing phase" of 28 days to reach maximum strength before we apply high-end quartz or glass internals.</p>
+                        <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="text-center">
+                                <div class="text-brand-500 font-display font-bold text-lg">W1-2</div>
+                                <div class="text-[9px] uppercase tracking-widest text-zinc-500">Excavation</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-brand-500 font-display font-bold text-lg">W3-5</div>
+                                <div class="text-[9px] uppercase tracking-widest text-zinc-500">Form & Pour</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-brand-500 font-display font-bold text-lg">W6-10</div>
+                                <div class="text-[9px] uppercase tracking-widest text-zinc-500">Cure / Tiling</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-brand-500 font-display font-bold text-lg">W11+</div>
+                                <div class="text-[9px] uppercase tracking-widest text-zinc-500">Handover</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Articles (Integrated Blog) -->
+    <section class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display text-4xl md:text-6xl font-bold mb-20 text-center reveal italic uppercase tracking-tighter">Pool <span class="text-brand-400">Insights</span></h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Article 1 -->
+                <article class="glass p-12 rounded-[3.5rem] reveal">
+                    <span class="text-brand-500 text-[10px] uppercase font-black tracking-widest mb-4 block">Construction Guide</span>
+                    <h3 class="font-display text-4xl font-black mb-8 italic leading-none tracking-tighter uppercase">Why Concrete is the King of Gold Coast Real Estate</h3>
+                    <p class="text-zinc-400 text-sm leading-7 mb-8">
+                        In the premium suburbs of the Gold Coast and Brisbane, a concrete pool is more than a swimming hole—it's a high-yield asset. Unlike fiberglass shells which have limited shapes and depth, concrete allows for infinity edges, sun-shelves, and custom benches that fit your landscape perfectly. From an investment perspective, concrete pools add significantly more equity to your property. Architectural integration is key: a pool should look like an extension of the house, not an afterthought. We've seen properties with Eco Pools concrete builds sell for 15-20% above suburb medians.
+                    </p>
+                    <a href="#contact" class="text-brand-400 font-black text-[10px] uppercase tracking-widest hover:text-white transition-colors">Start Your Design Project &rarr;</a>
+                </article>
+                <!-- Article 2 -->
+                <article class="glass p-12 rounded-[3.5rem] reveal">
+                    <span class="text-brand-500 text-[10px] uppercase font-black tracking-widest mb-4 block">Water Health</span>
+                    <h3 class="font-display text-4xl font-black mb-8 italic leading-none tracking-tighter uppercase">Magnesium Minerals: The Future of Chlorine-Free Life</h3>
+                    <p class="text-zinc-400 text-sm leading-7 mb-8">
+                        Traditional chlorine can cause skin irritation, red eyes, and a toxic smell. At Eco Pools, we believe in a better way. Magnesium mineral systems don't just sanitize your water; they offer a therapeutic experience. Magnesium is naturally detoxifying and relaxing for muscles. When you swim in one of our magnesium concrete pools, you feel recharged, not chemical-soaked. It's safe for children with sensitive skin and eco-friendly for the surrounding environment. Our specialized pumps and filters are designed to work with these minerals to maintain crystal clarity with minimal human intervention.
+                    </p>
+                    <a href="#contact" class="text-brand-400 font-black text-[10px] uppercase tracking-widest hover:text-white transition-colors">Experience Pure Water &rarr;</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us / Parallax Section -->
+    <section id="about" class="relative py-48 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=2400" alt="Pool Specialist" class="w-full h-full object-cover opacity-20 scale-110 parallax-bg" id="about-img">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950"></div>
+        </div>
+        <div class="container relative z-10 mx-auto px-6 text-center reveal">
+            <h2 class="font-display text-5xl md:text-8xl font-black italic uppercase tracking-tighter mb-16 leading-none">The Eco <span class="text-brand-400">Promise.</span></h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+                <div>
+                    <h5 class="text-brand-400 font-black text-xs uppercase mb-4 tracking-widest">Sustainability</h5>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Our concrete is locally sourced and engineered to reduce carbon footprint by 25% compared to standard mixes.</p>
+                </div>
+                <div>
+                    <h5 class="text-brand-400 font-black text-xs uppercase mb-4 tracking-widest">Precision</h5>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Our structural engineers approve every pour. We don't build fast; we build once, forever.</p>
+                </div>
+                <div>
+                    <h5 class="text-brand-400 font-black text-xs uppercase mb-4 tracking-widest">Wellness</h5>
+                    <p class="text-zinc-500 text-xs leading-relaxed">Magnesium water technology isn't an upgrade for us; it's our standard for every family we serve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Social Proof -->
+    <section class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+                <div class="aspect-square rounded-3xl overflow-hidden bg-zinc-900"><img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&q=80&w=600" alt="Pool 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+                <div class="aspect-square rounded-3xl overflow-hidden bg-zinc-900"><img src="https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=600" alt="Pool 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+                <div class="aspect-square rounded-3xl overflow-hidden bg-zinc-900 lg:col-span-2 lg:row-span-2"><img src="https://images.unsplash.com/photo-1519452632264-cb4a3e20173d?auto=format&fit=crop&q=80&w=1200" alt="Main Pool" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+                <div class="aspect-square rounded-3xl overflow-hidden bg-zinc-900"><img src="https://images.unsplash.com/photo-149452632264-cb4a3e20173d?auto=format&fit=crop&q=80&w=600" alt="Pool 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+                <div class="aspect-square rounded-3xl overflow-hidden bg-zinc-900"><img src="https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80&w=600" alt="Pool 4" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA / Contact -->
+    <section id="contact" class="py-32 relative">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <div class="glass p-16 md:p-24 rounded-[4rem] reveal border-emerald-500/10">
+                <h2 class="font-display text-5xl md:text-8xl font-black italic uppercase tracking-tighter mb-12 leading-none">Capture <br><span class="text-gradient">The Dream.</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-16">
+                    <a href="tel:1300792161" class="group bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800 hover:border-brand-500 transition-all flex flex-col gap-2">
+                        <span class="text-zinc-500 font-black text-[9px] uppercase tracking-widest">Direct Line</span>
+                        <span class="text-xl font-display font-bold group-hover:text-brand-400 transition-colors">1300 792 161</span>
+                    </a>
+                    <a href="https://wa.me/611300792161" class="group bg-emerald-950/20 p-8 rounded-3xl border border-emerald-900/30 hover:border-brand-500 transition-all flex flex-col gap-2">
+                        <span class="text-emerald-500/50 font-black text-[9px] uppercase tracking-widest">Instant Chat</span>
+                        <span class="text-xl font-display font-bold group-hover:text-brand-400 transition-colors">WhatsApp Us</span>
+                    </a>
+                </div>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10 opacity-30 mt-8">
+                     <span class="text-[10px] font-black tracking-[0.2em] uppercase">Brisbane</span>
+                     <span class="text-[10px] font-black tracking-[0.2em] uppercase">Gold Coast</span>
+                     <span class="text-[10px] font-black tracking-[0.2em] uppercase">Sunshine Coast</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer (3 Columns) -->
+    <footer class="py-24 border-t border-zinc-900 bg-zinc-950">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+                <!-- Column 1: Our Office -->
+                <div class="reveal">
+                    <h5 class="font-display text-lg font-black text-brand-400 mb-8 italic uppercase tracking-tighter">Our Office</h5>
+                    <div class="space-y-4 text-xs font-medium text-zinc-500 leading-relaxed">
+                        <p>Eco Pools Brisbane & Gold Coast</p>
+                        <p>123 Pool Avenue, Fortitude Valley<br>QLD 4006, Australia</p>
+                        <p class="pt-4">Hours: Mon-Fri: 8:00 AM - 5:00 PM</p>
+                        <p>ABN: 12 345 678 910</p>
+                    </div>
+                </div>
+                <!-- Column 2: Get In Touch -->
+                <div class="reveal">
+                    <h5 class="font-display text-lg font-black text-brand-400 mb-8 italic uppercase tracking-tighter">Get In Touch</h5>
+                    <div class="space-y-4 text-xs font-medium text-zinc-500 leading-relaxed">
+                        <a href="tel:1300792161" class="block hover:text-white transition-colors">T: 1300 792 161</a>
+                        <a href="mailto:info@ecopools.com.au" class="block hover:text-white transition-colors">E: info@ecopools.com.au</a>
+                        <div class="flex gap-4 pt-6">
+                             <a href="#" class="text-zinc-600 hover:text-white"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                             <a href="#" class="text-zinc-600 hover:text-white"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column 3: Our Services -->
+                <div class="reveal">
+                    <h5 class="font-display text-lg font-black text-brand-400 mb-8 italic uppercase tracking-tighter">Our Services</h5>
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-4 text-xs font-semibold text-zinc-600 uppercase tracking-widest">
+                        <a href="#services" class="hover:text-white transition-colors">Concrete Pools</a>
+                        <a href="#services" class="hover:text-white transition-colors">Magnesium Systems</a>
+                        <a href="#services" class="hover:text-white transition-colors">Renovations</a>
+                        <a href="#funnel" class="hover:text-white transition-colors">Cost Guide</a>
+                        <a href="#about" class="hover:text-white transition-colors">Process</a>
+                        <a href="#contact" class="hover:text-white transition-colors">Design Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-24 pt-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-8">
+                <span class="text-zinc-700 text-[10px]">&copy; 2026 Eco Pools AU. Designed by Elite Site Agency.</span>
+                <div class="flex gap-8 text-[10px] text-zinc-500">
+                    <a href="#" class="hover:text-white italic underline">Privacy Policy</a>
+                    <a href="#" class="hover:text-white italic underline">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth Scroll (Lenis)
+        const lenis = new Lenis({
+            lerp: 0.1,
+            smoothWheel: true
+        });
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Intersection Observer for Reveal
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.parallax-bg').forEach(el => {
+                const speed = 0.5;
+                el.style.transform = `scale(1.1) translateY(${scrolled * speed * 0.2}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

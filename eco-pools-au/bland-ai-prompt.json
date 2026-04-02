@@ -1,0 +1,17 @@
+{
+    "business_name": "Eco Pools AU",
+    "owner_name": "Mark",
+    "region": "Brisbane & Gold Coast, QLD",
+    "rating": "4.8 Stars",
+    "review_highlight": "Thashnee Govender and Reshaun Jones for calling you a 'Sustainable Legend' and 'Knowledgeable Expert'.",
+    "usp": "Eco-friendly concrete pools with Magnesium Mineral water systems.",
+    "phone": "1300792161",
+    "whatsapp": "611300792161",
+    "demo_link": "https://web-demos-1.pages.dev/eco-pools-au/",
+    "call_script": {
+        "hook": "Hey Mark, I'm calling from AI Site Agency. We've been looking at your 4.8-star reputation in Brisbane and we built something to protect it.",
+        "gift": "I've actually taken the liberty of building a full 'Eco Pools 2.0' preview for your business. It's a premium, long-form funnel that shows off your magnesium builds and makes you the obvious choice for high-end clients.",
+        "ask": "I've already got it live as a demo. Can I send you the link via SMS so you can check it out from your phone?",
+        "bye": "Awesome, sending it now to 1300 792 161. Talk soon, Mark."
+    }
+}
