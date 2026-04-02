@@ -27,6 +27,10 @@ I've already taken the liberty of building a **Premium Preview** of what your bu
 ### 🎁 The Offer
 I’ve already done the heavy lifting. You can see the live demo here: https://web-demos-1.pages.dev/hvac-guyz-plumbing/
 
+We keep it simple (The Starter Plan):
+* **$0 Upfront Setup Fee**: I've already built the site for you.
+* **$249 USD / month**: This covers ultra-fast premium hosting, security, and us handling all text/photo updates for you forever.
+
 If you want to own this site, put it on `hvacguyzatl.com`, and start capturing 2x more high-margin leads, let’s talk. 
 
 **Let’s turn those five-star reviews into a 24/7 lead machine.**
